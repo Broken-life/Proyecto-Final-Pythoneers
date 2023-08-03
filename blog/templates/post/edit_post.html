@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div>
+        <a href="{% url 'post:new_categoria' %}?next={% url 'post:edit_post' pk=object.id %}">Crear nueva categoría</a>
+    </div>
+    <h1>Modificar Post</h1>
+    <form method="POST" encrytype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Guardar Cambios">
+    </form>
+</div>
+
+{% endblock content %}

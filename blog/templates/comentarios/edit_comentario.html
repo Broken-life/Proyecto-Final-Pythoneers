@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_superuser or comentario.user == user %}
+        <div>
+            <h1>Editar comentario</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Editar comentario">
+            </form>
+        </div>
+    {% else %}
+        <div>
+            <h3>Solo usuarios con permisos pueden acceder a esta página</h3>
+        </div>
+    {% endif %}
+{% endblock content %}
