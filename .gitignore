@@ -20,11 +20,4 @@ db.sqlite3-journal
 
 
 
-####
-FALTA:
-superusuario : crear post en general todos lo permisos, pq no puedo asignar los permisos en el html
-editar post : como llemo al form para editarlo, porque si lo llamo donde form.loqeusea me aparece el input en blanco y no con lo que ya tenia
-editar comentario : ""
-
-
 
