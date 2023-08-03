@@ -4,13 +4,14 @@
 {% block content %}
     {% if user.is_superuser or request.user|has_group:"collaborator" or comentario.user == user %}
         <div>
-            <h1>Eliminar comentario</h1>
+            <h1 class="text-center">Eliminar comentario</h1>
             <p>¿Estás seguro de que deseas eliminar este comentario?</p>
             <form method="POST">
                 {% csrf_token %}
-                <input type="submit" value="Eliminar">
-                <a href="{% url 'post:posts' %}">Cancelar</a>
-                {% comment %} Como volver pa tra? {% endcomment %}
+                <div class="d-flex justify-content-center align-items-center mt-4">
+                    <input type="submit"  class="btn btn-outline-danger me-3" value="Eliminar">
+                    <a href="{% url 'post:posts' %}" class="text-info ms-3">Cancelar</a>
+                </div>
             </form>
         </div>
     {% else %}

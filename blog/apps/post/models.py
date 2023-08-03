@@ -17,7 +17,7 @@ class Post(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True, null=False)
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     imagen = models.ImageField(upload_to="media/", null=False)
-    publicado = models.BooleanField(default=False)
+    publicado = models.BooleanField(default=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
     permitir_comentarios = models.BooleanField(default=True)

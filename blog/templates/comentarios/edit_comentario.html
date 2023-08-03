@@ -2,12 +2,18 @@
 
 {% block content %}
     {% if user.is_superuser or comentario.user == user %}
-        <div>
-            <h1>Editar comentario</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h1 >Editar comentario</h1>
             <form method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Editar comentario">
+                {% comment %} {{ form.as_p }} {% endcomment %}
+                <div class="my-4">
+                    <label for="{{form.contenido.id_for_label}}">{{form.contenido.label}}:</label>
+                    <textarea class="form-control" name="{{form.contenido.html_name}}" id="{{form.contenido.id_for_label}}" cols="35" rows="5">{{form.contenido.value}}</textarea>
+                </div> 
+                <div class="d-flex align-items-center justify-content-center">
+                    <input type="submit" value="Editar comentario" class="btn btn-outline-info">
+                </div>
             </form>
         </div>
     {% else %}

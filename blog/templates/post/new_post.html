@@ -4,7 +4,7 @@
 {% block title %}Nuevo Post{% endblock title %}
 {% block content %}
 <div id="new_post">
-{% if request.user.userprofile.is_collaborator or request.user|has_group:"Collaborator"%}
+{% if request.user.userprofile.is_collaborator or request.user|has_group:"Collaborator" or request.user.is_superuser or request.user.is_staff %}
     
     <section>
         <h1 class="text-info text-center">Crear Post</h1>
