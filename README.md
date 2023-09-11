@@ -1,13 +1,6 @@
 
 # Blog IA Pythoneers | Trabajo Final Etapa 2 Informatorio
 
-Este es el repositorio de nuestro "Blog de noticias" sobre IA, como trabajo final del informatorio, en la etapa 2.  
-Framewoks utilizados: Djando y Bootstrap.  
-
-### Integrantes del grupo Pythoneers:  
-🚀 Yrala, Fabian.  
-🚀 Morinigo, Pedro.  
-🚀 Fogar, Yamila.
  
 ## Setup:
 
@@ -44,11 +37,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-**Agradecimientos**
-```
-Queremos agradecer a Lucas Rios por acompañarnos como profesor de la comisión 8 en esta etapa, por su conocimiento, didáctica y carisma, en cada clase.
-Agradecer a Pablo Coletti y Adrian Cabrera, nuestros mentores, quienes desde la primer clase, tuvieron la mejor predisposición, nos brindaron su conocimiento, acompañamiento y apoyo, sin importar el dia ni la hora, siempre estuvieron.
-Eternamente agradecidos✨.- Pythoneers.  
+
 
 ```
 
